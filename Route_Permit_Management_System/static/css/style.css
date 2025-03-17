@@ -1,0 +1,21 @@
+bhtml, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: #f0f4f8;
+    margin: auto;
+    border: box;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
