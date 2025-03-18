@@ -21,18 +21,17 @@ def vehicle_add_type(request):
     return render(request, "vehicleType.html")
 
 def editVehicleType(request,id):
-    
     vehicle = VehicleType.objects.get(id=id)
     print(vehicle)
-    context={
-        "vehicleType":vehicle
-    }
     if request.method == "POST":
         vehicle.type = request.POST.get("type")
         vehicle.save()
         return redirect('vehicleType')
-    return render(request, 'vehicleType.html',context)
-
+    return render(request, 'vehicleType.html')
+def delete_vehicle_type(request,id):
+    vehicleType=VehicleType.objects.get(id=id)
+    if request.method=="POST":
+        print('delete request')
 
 
         
