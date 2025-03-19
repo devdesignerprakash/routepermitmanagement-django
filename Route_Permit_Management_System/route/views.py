@@ -5,7 +5,6 @@ from .models import*
 # Create your views here.
 def home_view(request):
     return render(request,"homePage.html") 
-
 def vehicle_type_view(request):
       totalVehicleTypes= VehicleType.objects.all()
       context={
